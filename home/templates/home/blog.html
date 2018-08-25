@@ -1,0 +1,32 @@
+{% extends "home/base.html" %}
+
+
+
+
+
+{% block main_content %}
+
+<span style="display: block;text-align: center;">
+	<h3><strong>{{ title }}</strong></h3>
+	<br>
+</span>
+
+<span>
+	<pre style="font-family: Arial">{{ text|safe|linebreaksbr }}</pre>
+	<br>
+	<pre>{{ author }} | {{ time_created }}</pre>
+
+</span>
+
+{% endblock main_content %}
+
+{% block nav_highlight %}
+<script type="text/javascript">
+	// document.getElementById('blog-btn').classList.add("active");
+	document.getElementById("blog-btn").classList.add("active");
+
+	document.getElementById('about-btn').classList.remove("active");
+	document.getElementById('tag-btn').classList.remove("active");
+	document.getElementById('search-btn').classList.remove("active");
+</script>
+{% endblock nav_highlight %}

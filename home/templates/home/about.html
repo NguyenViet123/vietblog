@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+
+{% block main_content %}
+
+<span style="display: block;text-align: center;">
+	<h3><strong>{{ title }}</strong></h3>
+	<br>
+</span>
+
+<span>
+	<p>{{ text|safe|linebreaksbr }}</p>
+	<p>Facebook: <a href="http://fb.com/viet241097" target="_blank">Viet Nguyen</a></p>
+	<pre>{{ time_created }}</pre>
+</span>
+
+{% endblock main_content %}
